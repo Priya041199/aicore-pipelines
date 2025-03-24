@@ -13,13 +13,9 @@ metadata:
 spec:
   imagePullSecrets:
     - name: aitutorialrepo # your docker registry secret
-  entrypoint: mypipeline
+  entrypoint: mycodeblock1
   templates:
-  - name: mypipeline
-    steps:
-    - - name: mypredictor
-        template: mycodeblock1
-
+  
   - name: mycodeblock1
     container:
       image: docker.io/priya049/demo_data:01 # Your docker image name
